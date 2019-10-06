@@ -3,7 +3,6 @@
   "description": "Adds a block to (children of) a category",
   "type": "magento2-module",
   "version": "1.0.0",
-  "minimum-stability": "dev",
   "authors" : [
     {
       "name": "Isolde van Oosterhout (SolsWebdesign)",
