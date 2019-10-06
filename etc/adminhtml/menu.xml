@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Sols_BlockPerCategory::menu" title="Sols" module="Sols_BlockPerCategory"
+             sortOrder="102" parent="Magento_Catalog::catalog" resource="Sols_BlockPerCategory::menu"
+             translate="title"/>
+        <add id="Sols_BlockPerCategory::sols" title="Blocks per Category" module="Sols_BlockPerCategory" parent="Sols_BlockPerCategory::menu"
+             sortOrder="10" action="sols/index" resource="Sols_BlockPerCategory::sols"
+             translate="title"/>
+    </menu>
+</config>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../vendor/magento/framework/ObjectManager/etc/config.xsd">
+    <preference for="Sols\BlockPerCategory\Api\Data\BlockpercategoryInterface" type="Sols\BlockPerCategory\Model\Blockpercategory"/>
+    <preference for="Sols\BlockPerCategory\Api\BlockpercategoryRepositoryInterface" type="Sols\BlockPerCategory\Model\BlockpercategoryRepository"/>
+    <!-- new, for grid -->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="sols_blockpercategory_grid_data_source" xsi:type="string">Sols\BlockPerCategory\Model\ResourceModel\Blockpercategory\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

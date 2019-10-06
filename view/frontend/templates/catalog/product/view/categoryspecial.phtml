@@ -1,0 +1,17 @@
+<?php
+/** @var \Sols\BlockPerCategory\Block\Categoryspecial $block */
+?>
+<?php $debug = $block->getDebugInfo(); ?>
+<?php if($debug): ?>
+    <?php echo '<pre>'; ?>
+    <?php var_dump($block->getIdAndParentIds()); ?>
+    <?php echo '</pre>'; ?>
+<?php endif; ?>
+<?php $id = $block->getBlockIdForCategory(); ?>
+<?php if(isset($id)) : ?>
+    <?php echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId($id)
+            ->toHtml();
+    ?>
+<?php endif; ?>
